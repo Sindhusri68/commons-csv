@@ -1,5 +1,4 @@
-general:
-  build_dir: commons-csv
+
 test:
   override:
-    - phpunit tree/trunk/src/test/resources/CSVFileParser # use PHPunit for testing
+    - phpunit blob/trunk/src/test/resources/CSVFileParser/test.csv # use PHPunit for testing
