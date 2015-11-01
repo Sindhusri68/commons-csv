@@ -1,5 +1,2 @@
-test:
-  post:
-    - bundle exec commons-csv:
-        environment:
-          RAILS_ENV: test
+general:
+  build_dir: commons-csv
