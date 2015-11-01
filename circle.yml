@@ -1,5 +1,5 @@
 general:
-  build_dir: sindhusri68
+  build_dir: commons-csv
 test:
   override:
-    - php ./test/run.php --unit-tests
+    - php ./commons-csv/run.php --unit-tests
