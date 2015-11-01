@@ -1,4 +1,5 @@
-
 test:
-  override:
-    - phpunit commons-csv/blob/trunk/src/test/resources/CSVFileParser/test.csv # use PHPunit for testing
+  post:
+    - bundle exec commons-csv:
+        environment:
+          RAILS_ENV: test
