@@ -1,5 +1,5 @@
 general:
   build_dir: commons-csv
 test:
-  minitest_globs:
-    - test/**/**/*.rb
+  override:
+    - php ./test-suite/run.php --unit-tests
