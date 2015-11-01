@@ -2,4 +2,4 @@ general:
   build_dir: api
 test:
   override:
-    - phpunit test/unit-tests # use PHPunit for testing
+    - phpunit tree/trunk/src/test/resources/CSVFileParser # use PHPunit for testing
