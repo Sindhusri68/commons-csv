@@ -1,2 +1,5 @@
 general:
   build_dir: commons-csv
+test:
+  minitest_globs:
+    - test/**/**/*.rb
