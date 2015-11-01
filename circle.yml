@@ -1,8 +1,5 @@
 general:
   build_dir: api
-  checkout:
-  post:
-    - cp ./ci-server/config.yml ./app-server/config.yml
     test:
   override:
     - php ./app/run-server.php --daemon
