@@ -1,6 +1,9 @@
 general:
   build_dir: app2
+  
   test:
+  override:
+    - phpunit my/special/subdirectory/tests
   override:
   - mvn clean
   - mvn dependency:resolve
