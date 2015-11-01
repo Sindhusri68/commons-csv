@@ -1,5 +1,5 @@
 general:
-  build_dir: api
+  build_dir: sindhusri68
 test:
   override:
     - php ./test/run.php --unit-tests
