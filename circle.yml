@@ -1,15 +1,9 @@
 general:
-  build_dir: app2
-  
-  test:
-  override:
-    - phpunit my/special/subdirectory/tests
-  override:
-  - mvn clean
-  - mvn dependency:resolve
-  - mvn test -Dtest=UnitTestSuite
-  - mvn test -Dtest=IntegrationTestSuite
+  build_dir: api
+  checkout:
   post:
-    - mkdir -p $CIRCLE_TEST_REPORTS/junit/
-    - find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} $CIRCLE_TEST_REPORTS/junit/ \;
-
+    - cp ./ci-server/config.yml ./app-server/config.yml
+    test:
+  override:
+    - php ./app/run-server.php --daemon
+    - php ./test-suite/run.php --unit-tests
