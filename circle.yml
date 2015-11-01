@@ -2,4 +2,4 @@ general:
   build_dir: commons-csv
 test:
   override:
-    - php ./test-suite/run.php --unit-tests
+    - php ./test/run.php --unit-tests
