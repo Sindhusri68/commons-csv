@@ -1,1 +1,8 @@
-
+test:
+  override:
+    - phpunit test/unit-tests # use PHPunit for testing
+  post:
+    - bundle exec rake test:ci: # add an extra test type
+        environment:
+          RAILS_ENV: test
+          RACK_ENV: test
